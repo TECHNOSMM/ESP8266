@@ -1,4 +1,7 @@
-print("Setting up WIFI...")
+-- SSID ve PASS (şifre)nizi girin
+-- VE
+--
+print("Wifi Ayarlanıyor")
 wifi.setmode(wifi.STATION)
 wifi.sta.config("SSID","PASS")
 wifi.sta.connect();
@@ -8,7 +11,7 @@ print(wifi.sta.getip())
 pin = 4 -- GPIO2 
 
 function getTemp()
-status,temp,humi,temp_decimial,humi_decimial = dht.read11(pin)
+status,temp,humi,temp_decimial,humi_decimial = dht.readxx(pin)
 if( status == dht.OK ) then
   -- Integer firmware using this example
   print(     
